@@ -1,15 +1,16 @@
 extends Node2D
 
 var speed = 300
+var state = 1
 var direction = Vector2(1,0)
 var screen_size=Vector2()
 var window_size=Vector2(200, 200)
 var idle_timer = 0.0
 var is_idling= false
 func maybe_idle():
-	if randf() < 0.3:
+	if randf() < 0.7:
 		is_idling = true
-		idle_timer = randf_range(1.0,3.0)
+		idle_timer = randf_range(1.0,10.0)
 		var r = randi() %3
 		if r==0:
 			animated_sprite.play("Idle")
@@ -19,7 +20,6 @@ func maybe_idle():
 var is_dragging = false
 var drag_offset = Vector2()
 func _on_input_event(_viewport, event, _shape_idx):
-	print("clicked")
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
 			is_dragging = true
@@ -28,6 +28,15 @@ func _on_input_event(_viewport, event, _shape_idx):
 			drag_offset = mouse_pos - win_pos
 		else:
 			is_dragging = false
+	if event is InputEventMouseButton and event.pressed and event.double_click:
+		print("double click!")
+		state=-1*state
+		if state==1:
+			speed=0
+			animated_sprite.play("Idle")
+		else:
+			speed=300
+			animated_sprite.play("Walk_Right")
 func _ready():
 	print("Inside Ready")
 	screen_size = Vector2(DisplayServer.screen_get_size())

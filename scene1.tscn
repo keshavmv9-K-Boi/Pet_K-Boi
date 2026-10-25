@@ -360,12 +360,12 @@ size = Vector2(205, 210)
 script = ExtResource("1_m2sqd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1641417216]
-position = Vector2(99, 99)
+position = Vector2(101, 103)
 sprite_frames = SubResource("SpriteFrames_f53vw")
 animation = &"Walk_Right"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=343888286]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1787953472]
-position = Vector2(106.5, 101)
+position = Vector2(123, 93)
 shape = SubResource("RectangleShape2D_m2sqd")

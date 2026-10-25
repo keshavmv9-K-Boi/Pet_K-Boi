@@ -348,24 +348,24 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_gvup2")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Walk_Right",
 "speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m2sqd"]
-size = Vector2(196, 204)
+size = Vector2(539, 390)
 
 [node name="Node2D" type="Node2D" unique_id=1884626968]
 script = ExtResource("1_s0gbd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1641417216]
-position = Vector2(263, 54)
+position = Vector2(108, 84)
 sprite_frames = SubResource("SpriteFrames_f53vw")
 animation = &"Walk_Right"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=343888286]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1787953472]
-position = Vector2(0, 150)
+position = Vector2(236, 81)
 shape = SubResource("RectangleShape2D_m2sqd")
