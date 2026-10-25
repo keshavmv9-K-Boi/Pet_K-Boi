@@ -199,7 +199,7 @@ region = Rect2(5106, 384, 222, 192)
 [sub_resource type="SpriteFrames" id="SpriteFrames_f53vw"]
 animations = [{
 "frames": [{
-"duration": 0.5,
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_tq727")
 }, {
 "duration": 1.0,
@@ -353,20 +353,19 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pxnjm"]
-size = Vector2(242.5, 216.5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m2sqd"]
 
 [node name="Node2D" type="Node2D" unique_id=1884626968]
 script = ExtResource("1_m2sqd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1641417216]
-position = Vector2(100, 94)
+position = Vector2(99, 99)
 sprite_frames = SubResource("SpriteFrames_f53vw")
 animation = &"Walk_Right"
-frame_progress = 0.32178345
 
 [node name="Area2D" type="Area2D" parent="." unique_id=343888286]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1787953472]
 position = Vector2(102, 106)
-shape = SubResource("RectangleShape2D_pxnjm")
+shape = SubResource("RectangleShape2D_m2sqd")
