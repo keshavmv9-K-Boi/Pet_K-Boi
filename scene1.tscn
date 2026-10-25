@@ -354,6 +354,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m2sqd"]
+size = Vector2(205, 210)
 
 [node name="Node2D" type="Node2D" unique_id=1884626968]
 script = ExtResource("1_m2sqd")
@@ -364,8 +365,7 @@ sprite_frames = SubResource("SpriteFrames_f53vw")
 animation = &"Walk_Right"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=343888286]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1787953472]
-position = Vector2(102, 106)
+position = Vector2(106.5, 101)
 shape = SubResource("RectangleShape2D_m2sqd")

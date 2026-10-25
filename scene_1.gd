@@ -1,9 +1,9 @@
 extends Node2D
 
-var speed = 100
+var speed = 300
 var direction = Vector2(1,0)
 var screen_size=Vector2()
-var window_size=Vector2(200,200)
+var window_size=Vector2(200, 200)
 var idle_timer = 0.0
 var is_idling= false
 func maybe_idle():
@@ -47,8 +47,8 @@ func _physics_process(delta: float) -> void:
 			animated_sprite.play("Walk_Right")
 		return
 	var window_position = Vector2(DisplayServer.window_get_position())
-	window_position += direction*speed*delta
-	#print(window_position)
+	window_position += direction * speed * delta
+	print(window_position)
 	window_position.x = clamp(window_position.x, 0, screen_size.x - window_size.x)
 	window_position.y = clamp(window_position.y, 0, screen_size.y - window_size.y)
 	DisplayServer.window_set_position(Vector2i(window_position))
