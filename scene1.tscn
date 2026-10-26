@@ -359,6 +359,10 @@ size = Vector2(205, 210)
 [node name="Node2D" type="Node2D" unique_id=1884626968]
 script = ExtResource("1_m2sqd")
 
+[node name="PopupMenu" type="PopupMenu" parent="." unique_id=119164021]
+oversampling_override = 1.0
+visible = true
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1641417216]
 position = Vector2(101, 103)
 sprite_frames = SubResource("SpriteFrames_f53vw")
