@@ -8,3 +8,6 @@ A cool looking and smooth feeling desktop pet that has commands.
                                                              - "wander"- Turns the above both off.
                                                              - "die" - Quits the application after playing dying animation.
 5. Draggable
+
+## Find it here:
+https://k-boi.itch.io/drone-pet
